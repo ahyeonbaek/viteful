@@ -33,6 +33,10 @@ if (!IS_PRODUCTION) {
   app.use("/", sirv("./dist/client", { extensions: [] }));
 }
 
+app.get("/api/test", (req, res) => {
+  return res.json({ result: true });
+});
+
 // 사용자가 api 요청 혹은, url을 통해서 페이지 접근 시 응답해주는 코드
 app.use("*", async (req, res) => {
   try {
