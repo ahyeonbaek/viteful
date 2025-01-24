@@ -1,6 +1,7 @@
 # Viteful
 
-Viteful은 **Vite** 기반의 React Boilerplate에 **Server Side Rendering (SSR)** 기능을 추가하여, 기본적으로 Client Side Rendering(CSR)만 지원하는 Vite 프로젝트의 SEO(Search Engine Optimization) 문제를 해결하고자 개발된 프로젝트입니다.
+Viteful은 **Vite** 기반의 React Boilerplate에 **Server Side Rendering (SSR)** 기능을 추가하여, 기본적으로 Client Side Rendering(CSR)만 지원하는 Vite 프로젝트의 SEO(Search Engine Optimization) 문제를 해결하고자 개발된 프로젝트입니다. 추가적으로 **Filebase** 기반의 라우팅을 지원하여,
+별도의 Router 파일을 관리할 필요 없이 파일 구조를 분석하여 자동으로 라우팅을 처리해줍니다.
 
 ---
 
@@ -9,6 +10,18 @@ Viteful은 **Vite** 기반의 React Boilerplate에 **Server Side Rendering (SSR)
 - **빠른 빌드 및 개발 환경**: Vite의 기본 기능을 그대로 활용.
 - **SEO 개선**: SSR을 통해 초기 HTML을 렌더링하여 검색 엔진 최적화.
 - **React 기반 SPA**: React Router DOM과 함께 동작하며, CSR과 SSR을 모두 지원.
+- **파일 기반 라우팅(File-Based Routing)**: 페이지 디렉토리 구조와 파일 이름에 따라 자동으로 라우트를 생성.
+
+---
+
+## 파일 기반 라우팅(File-Based Routing)
+
+이 프로젝트는 React Router DOM의 Routes를 활용한 파일 기반 라우팅을 제공합니다. `./src/pages` 디렉토리 구조와 파일 이름에 따라 자동으로 라우트를 생성하며, 다음과 같은 규칙을 따릅니다.
+
+- `pages/index.tsx` → `/`
+- `pages/about.tsx` → `/about`
+- `pages/shop/index.tsx` → `/shop`
+- `pages/shop/product.tsx` → `/shop/product`
 
 ---
 
